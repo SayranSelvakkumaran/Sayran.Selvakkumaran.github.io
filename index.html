@@ -4,20 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#eef0ea">
 
     <!-- SEO: keep the full name (with two k's, matching your CV) in the title and description -->
     <title>Sayran Selvakkumaran | Mechanical engineering student, University of Bath</title>
     <meta name="description" content="Sayran Selvakkumaran is a mechanical engineering student at the University of Bath. Portfolio of FEA, design, robotics and making projects, plus placement work at AtkinsRéalis and Rolls-Royce SMR.">
     <meta name="author" content="Sayran Selvakkumaran">
 
-    <!-- Once the site is live, replace YOUR-DOMAIN with your real address (e.g. sayranselvakkumaran.com or your GitHub Pages URL) -->
+    <!--
+        TODO before you push: replace YOUR-DOMAIN in the 3 places below (canonical, og:url) and in the
+        structured data further down. For GitHub Pages this is usually
+        https://YOURUSERNAME.github.io/ (if the repo is named YOURUSERNAME.github.io)
+        or https://YOURUSERNAME.github.io/REPONAME/ for any other repo name.
+    -->
     <link rel="canonical" href="https://YOUR-DOMAIN/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sayran Selvakkumaran | Mechanical engineering student">
     <meta property="og:description" content="Portfolio of FEA, design, robotics and making projects.">
     <meta property="og:url" content="https://YOUR-DOMAIN/">
-    <!-- Add a preview image (1200x630) at images/preview.jpg for nicer link previews -->
-    <meta property="og:image" content="https://YOUR-DOMAIN/images/preview.jpg">
+    <!--
+        Optional: once you have a 1200x630 image at images/preview.jpg, add this line back
+        so links to your site show a nice preview card:
+        <meta property="og:image" content="https://YOUR-DOMAIN/images/preview.jpg">
+    -->
 
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316201C'/%3E%3Ctext x='32' y='45' font-size='40' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23F1D23A'%3ES%3C/text%3E%3C/svg%3E">
 
@@ -45,17 +54,12 @@
 </head>
 
 <!--
-    HOW TO SWAP IN YOUR OWN PHOTOS
-    Every placeholder looks like this:
-
-        <figure class="shot is-placeholder"> <figcaption class="ph-note">Photo: ...</figcaption> </figure>
-
-    Replace the whole <figure> with:
-
-        <figure class="shot"><img src="images/your-photo.jpg" alt="Describe what the photo shows" loading="lazy"></figure>
-
-    Keep the same extra class on the figure if it has one (hero-shot, inset, wide, etc.) so the layout stays intact.
-    Put your image files in an "images" folder next to this file.
+    HOW TO ADD YOUR PROFILE PHOTO
+    1. Put your photo in an "images" folder next to this file and name it profile.jpg
+       (file names are case-sensitive on GitHub Pages).
+    2. Use a portrait photo (the frame is 4:5) and compress it to roughly 200-400 KB first.
+    3. Edit the alt text below to describe the photo.
+    If your photo has a different name, change src="images/profile.jpg" in the hero section.
 -->
 
 <body id="top">
@@ -96,9 +100,22 @@
                 </p>
             </div>
 
-            <figure class="shot hero-shot is-placeholder">
-                <figcaption class="ph-note">Photo: you, at the workbench or with something you've built</figcaption>
+            <figure class="shot hero-shot">
+                <img src="images/profile.jpg" alt="Sayran Selvakkumaran">
             </figure>
+        </section>
+
+
+        <!-- Recognition -->
+        <section class="wrap recognition recognition-strip" aria-labelledby="recognition-title">
+            <h3 id="recognition-title">Recognition</h3>
+            <ul>
+                <li>Royal Academy of Engineering Engineering Leaders Scholar</li>
+                <li>3rd place, Global Innovators Challenge 2025/26</li>
+                <li>Rolls-Royce SMR Employee Appreciation of the Month</li>
+                <li>Arthur Clements Fund recipient</li>
+                <li>GEEP Graduate 2025/26</li>
+            </ul>
         </section>
 
 
@@ -111,17 +128,17 @@
                     <p>A mix of placement work, university projects and things I built because I wanted to.</p>
                 </div>
 
-                <!-- Feature: Heart -->
-                <article class="feature">
-                    <div class="feature-media">
-                        <figure class="shot wide is-placeholder">
-                            <figcaption class="ph-note">Image: FEA stress or strain plot from the heart model</figcaption>
-                        </figure>
-                        <figure class="shot inset is-placeholder">
-                            <figcaption class="ph-note">Photo: prototype, test rig or CAD render</figcaption>
-                        </figure>
-                    </div>
-                    <div class="feature-text">
+                <!--
+                    TIP: wherever you can, add a number. "Reduced the force needed by 40%" or
+                    "used with 300 pupils across 6 schools" is far stronger than a general claim.
+                    You can also add a link at the end of any project, for example:
+                    <p><a href="https://github.com/...">Read the write-up</a></p>
+                -->
+
+                <div class="features">
+
+                    <!-- Feature: Heart -->
+                    <article class="feature">
                         <h3>Total artificial heart</h3>
                         <p class="meta">Team Bath Heart, 2026 to now</p>
                         <p>
@@ -135,20 +152,10 @@
                             which means turning analysis and research into decisions other people can follow.
                         </p>
                         <p class="tools"><strong>Tools:</strong> ANSYS, MATLAB, CAD</p>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Feature: Robotics coating maintenance -->
-                <article class="feature reverse">
-                    <div class="feature-media">
-                        <figure class="shot wide is-placeholder">
-                            <figcaption class="ph-note">Image: concept sketch, process diagram or MCDA chart (check it's fine to share)</figcaption>
-                        </figure>
-                        <figure class="shot inset is-placeholder">
-                            <figcaption class="ph-note">Image: second diagram or photo</figcaption>
-                        </figure>
-                    </div>
-                    <div class="feature-text">
+                    <!-- Feature: Robotics coating maintenance -->
+                    <article class="feature">
                         <h3>Robotic coating maintenance for small modular reactors</h3>
                         <p class="meta">AtkinsRéalis, placement year</p>
                         <p>
@@ -158,16 +165,14 @@
                             finally a proposed robotic operating process.
                         </p>
                         <p class="tools"><strong>Skills:</strong> robotics, MCDA, feasibility studies</p>
-                    </div>
-                </article>
+                    </article>
+
+                </div>
 
                 <!-- Smaller projects -->
                 <div class="more">
 
                     <article class="mini span-2">
-                        <figure class="shot is-placeholder">
-                            <figcaption class="ph-note">Photo: the robotic hand, ideally mid-movement</figcaption>
-                        </figure>
                         <h3>3D-printed robotic hand</h3>
                         <p>
                             A working hand driven by an Arduino, with fishing wire pulling each finger.
@@ -176,9 +181,6 @@
                     </article>
 
                     <article class="mini span-2">
-                        <figure class="shot is-placeholder">
-                            <figcaption class="ph-note">Photo: the SMR kit, or kids using it at an outreach event</figcaption>
-                        </figure>
                         <h3>Small modular reactor outreach kit</h3>
                         <p>
                             A 3D-printed demonstration kit about small modular reactors. I use it in
@@ -187,9 +189,6 @@
                     </article>
 
                     <article class="mini span-2">
-                        <figure class="shot is-placeholder">
-                            <figcaption class="ph-note">Photo: the weeding tool, or a CAD render of it</figcaption>
-                        </figure>
                         <h3>Weeding tool for reduced grip strength</h3>
                         <p>
                             A gardening tool for people with limited grip strength and mobility.
@@ -199,9 +198,6 @@
                     </article>
 
                     <article class="mini span-3">
-                        <figure class="shot is-placeholder">
-                            <figcaption class="ph-note">Image: stress analysis plot or CAD of the drive shaft</figcaption>
-                        </figure>
                         <h3>Forklift drive shaft optimisation</h3>
                         <p>
                             Stress analysis of a forklift drive shaft under dynamic loading. I compared
@@ -211,9 +207,6 @@
                     </article>
 
                     <article class="mini span-3">
-                        <figure class="shot is-placeholder">
-                            <figcaption class="ph-note">Image: plant layout, storyboard or FMECA table</figcaption>
-                        </figure>
                         <h3>Automated cell-packing machine</h3>
                         <p>
                             A machine concept built from several mechanical sub-systems, with a plant layout
@@ -274,9 +267,6 @@
                                 <li>Designed and manufactured lightweight composite chassis components for an electric racing car, balancing strength, manufacturing limits and packaging space.</li>
                                 <li>Worked through assembly and integration problems with the wider team to get components aligned accurately.</li>
                             </ul>
-                            <figure class="shot job-shot is-placeholder">
-                                <figcaption class="ph-note">Photo: chassis parts, layup or the finished car</figcaption>
-                            </figure>
                         </div>
                     </article>
 
@@ -302,30 +292,22 @@
 
         <!-- About -->
         <section id="about" class="block">
-            <div class="wrap about">
-
-                <div class="about-text">
-                    <h2>A bit more about me</h2>
-                    <p>
-                        I like the moment a design stops being a drawing and starts being a
-                        thing you can pick up. That's why I keep going back to 3D printing,
-                        Arduino builds and CAD. I even enjoy CAD speed modelling, which is
-                        exactly as nerdy as it sounds.
-                    </p>
-                    <p>
-                        I'm a STEM Ambassador and I take the SMR kit into schools. Explaining
-                        engineering to a room of children is a good test of whether I really understand it.
-                    </p>
-                    <p>
-                        Long term, I want to work in nuclear and eventually lead engineering teams.
-                        Away from the screen, I play badminton and violin, and I play chess.
-                    </p>
-                </div>
-
-                <figure class="shot about-shot is-placeholder">
-                    <figcaption class="ph-note">Photo: something less formal, such as outreach, badminton or a build in progress</figcaption>
-                </figure>
-
+            <div class="wrap about-text">
+                <h2>A bit more about me</h2>
+                <p>
+                    I like the moment a design stops being a drawing and starts being a
+                    thing you can pick up. That's why I keep going back to 3D printing,
+                    Arduino builds and CAD. I even enjoy CAD speed modelling, which is
+                    exactly as nerdy as it sounds.
+                </p>
+                <p>
+                    I'm a STEM Ambassador and I take the SMR kit into schools. Explaining
+                    engineering to a room of children is a good test of whether I really understand it.
+                </p>
+                <p>
+                    Long term, I want to work in nuclear and eventually lead engineering teams.
+                    Away from the screen, I play badminton and violin, and I play chess.
+                </p>
             </div>
 
             <div class="wrap">
@@ -336,33 +318,26 @@
                         <p>Autodesk Inventor, SOLIDWORKS, Fusion 360, AutoCAD. Assemblies and technical drawings with GD&amp;T to BS and ISO standards.</p>
                     </div>
 
+                    <!--
+                        NOTE: your file was cut off after the first item above, so the next three
+                        items are my reconstruction from your CV details. Edit or replace them with
+                        whatever your original said.
+                    -->
                     <div>
-                        <h3>Analysis and code</h3>
-                        <p>FEA, MATLAB, Simulink and Python. Numerical simulation, engineering modelling, data analysis and control systems.</p>
+                        <h3>Analysis</h3>
+                        <p>Finite element analysis in ANSYS, including hyperelastic materials, plus hand calculations and code-checking against recognised standards.</p>
                     </div>
 
                     <div>
-                        <h3>Automation</h3>
-                        <p>Excel VBA, Power Automate, Power Apps and Power BI. Automated data workflows and tracking tools.</p>
+                        <h3>Programming and automation</h3>
+                        <p>Python, MATLAB and the Microsoft Power Platform (Power Automate, Forms, Excel) for analysis and for replacing manual processes.</p>
                     </div>
 
                     <div>
-                        <h3>Making</h3>
-                        <p>3D printing, Arduino and mechatronics, and composite manufacture from my time on the racing team.</p>
+                        <h3>Making and outreach</h3>
+                        <p>3D printing, Arduino and prototyping, and STEM outreach in schools as a registered STEM Ambassador.</p>
                     </div>
 
-                </div>
-
-                <div class="recognition">
-                    <h3>Awards and recognition</h3>
-                    <ul>
-                        <li>Royal Academy of Engineering Engineering Leaders Scholarship</li>
-                        <li>3rd place, Global Innovators Challenge 2025/26</li>
-                        <li>Rolls-Royce SMR Employee Appreciation of the Month</li>
-                        <li>Arthur Clements Fund recipient</li>
-                        <li>GEEP graduate and ambassador</li>
-                        <li>STEM Ambassador</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -371,17 +346,15 @@
         <!-- Contact -->
         <section id="contact" class="block contact">
             <div class="wrap">
-                <h2>Say hello</h2>
+                <h2>Get in touch</h2>
                 <p>
-                    If you'd like to talk about a project, outreach or engineering in
-                    general, email me.
+                    I'm happy to talk about engineering, outreach, or anything on this page.
                 </p>
-                <p class="email">
-                    <a href="mailto:sayrans2005@gmail.com">sayrans2005@gmail.com</a>
-                </p>
+                <!-- TODO: replace with your real email address in both places -->
+                <p class="email"><a href="mailto:your.email@example.com">your.email@example.com</a></p>
                 <p class="contact-links">
-                    <a href="https://www.linkedin.com/in/sayran-selvakkumaran/">LinkedIn</a>
-                    <a href="https://github.com/SayranSelvakkumaran">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sayran-selvakkumaran/" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/SayranSelvakkumaran" rel="noopener">GitHub</a>
                     <a href="Sayran_Selvakkumaran_CV_MechEng.pdf">CV (PDF)</a>
                 </p>
             </div>
@@ -396,4 +369,5 @@
     </footer>
 
 </body>
+
 </html>
